@@ -1,0 +1,73 @@
+/* 基本布局 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #000428, #004e92); /* 应用渐变背景 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  transition: background 1s ease; /* 背景颜色过渡 */
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  text-align: center;
+  padding: 20px;
+}
+
+#typed-output {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+#blockchain-cube {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  animation: rotate 5s infinite linear;
+  background-color: #00bcd4;
+  transform-style: preserve-3d;
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+@keyframes rotate {
+  0% { transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.goals {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+/* Chatbot 容器 */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #333;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+}
